@@ -1,0 +1,16 @@
+GET http://localhost:3000/tasks
+
+###
+
+POST http://localhost:3000/tasks
+Content-Type: application/json
+
+{
+    "text": "Doctor's appointment",
+    "day": "Feb 25th at 3:15 PM",
+    "reminder": true
+}
+
+###
+
+DELETE http://localhost:3000/tasks/677c604f2256a41077b98979
