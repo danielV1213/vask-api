@@ -3,6 +3,7 @@ import chalk from "chalk";
 import mongoose from "mongoose";
 import { configDotenv } from "dotenv";
 import tasksRouter from "./routes/tasks.js";
+import cors from "cors";
 
 // Environment variables access setup
 configDotenv();
@@ -24,6 +25,7 @@ db.on("connected", () =>
 
 // Server setup
 app.use(express.json());
+app.use(cors());
 
 // Routes setup
 app.use("/tasks", tasksRouter);
